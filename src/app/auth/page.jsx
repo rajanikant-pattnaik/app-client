@@ -17,7 +17,7 @@ const Page = () => {
   const router=useRouter();
   const config = {
     headers: { "Content-Type": "application/json" },
-    withCredentials: true,
+    credentials: "include",
   };
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);

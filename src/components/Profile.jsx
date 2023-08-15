@@ -10,14 +10,14 @@ const Profile = () => {
     try {
       const res = await axios.get(
         `${BASE_URL}/api/v1/users/userDetails`,
-        { withCredentials: true }
+        { credentials:"include" }
       );
       if(res.data.success===true){
         setDetails(res.data.user);
       }
       const res2=await axios.get(
         `${BASE_URL}/api/v1/users/bios/myBio`,
-        { withCredentials: true }
+        { credentials:"include" }
       );
       if(res2.data.success===true){
         setBio(res2.data.user);
